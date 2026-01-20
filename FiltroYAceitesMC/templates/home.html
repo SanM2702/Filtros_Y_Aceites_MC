@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Filtros y Aceites MC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-overlay"></div>
+
+        <header class="navbar">
+            <div class="navbar-brand">
+                <span class="logo-mark">MC</span>
+                <span class="logo-text">Filtros y Aceites</span>
+            </div>
+            <nav class="navbar-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </header>
+
+        <main class="hero-content">
+            <section class="quote-card">
+                <div class="card-header">
+                    <h1>FILTROS Y ACEITES MC</h1>
+                    <p>Encuentra el filtro y aceite adecuado para tu vehículo.</p>
+                </div>
+
+                <form class="quote-form">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="marca">Marca</label>
+                            <select id="marca" name="marca">
+                                <option value="">Selecciona la marca</option>
+                                <option>Chevrolet</option>
+                                <option>Renault</option>
+                                <option>Mazda</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="modelo">Modelo</label>
+                            <select id="modelo" name="modelo">
+                                <option value="">Selecciona el modelo</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="anio">Año</label>
+                            <select id="anio" name="anio">
+                                <option value="">Selecciona el año</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row options-row">
+                        <span class="options-title">Tipos de filtro</span>
+                        <div class="options-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="filtro_aire" />
+                                <span>Filtro de aire</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="filtro_combustible" />
+                                <span>Filtro de combustible</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="filtro_aceite" />
+                                <span>Filtro de aceite</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="filtro_cabina" />
+                                <span>Filtro de cabina</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="submit" class="btn-primary">
+                            COTIZAR
+                        </button>
+                        <span class="helper-text">
+                            Respuesta rápida vía WhatsApp o llamada.
+                        </span>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>© {{ year|default:2025 }} Filtros y Aceites MC</span>
+            <span class="footer-highlight">Cambio de aceite · Filtros · Mantenimiento preventivo</span>
+        </footer>
+    </div>
+</body>
+</html>
